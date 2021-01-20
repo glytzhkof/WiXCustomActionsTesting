@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.852
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "WiXCustomActionsTesting", "WiXCustomActionsTesting\WiXCustomActionsTesting.wixproj", "{154EE785-0E38-4222-AD6F-584B5B15511B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomAction1", "CustomAction1\CustomAction1.csproj", "{38FCF29A-08B6-41A2-9DF3-28D6617C583E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{154EE785-0E38-4222-AD6F-584B5B15511B}.Debug|x86.ActiveCfg = Debug|x86
+		{154EE785-0E38-4222-AD6F-584B5B15511B}.Debug|x86.Build.0 = Debug|x86
+		{154EE785-0E38-4222-AD6F-584B5B15511B}.Release|x86.ActiveCfg = Release|x86
+		{154EE785-0E38-4222-AD6F-584B5B15511B}.Release|x86.Build.0 = Release|x86
+		{38FCF29A-08B6-41A2-9DF3-28D6617C583E}.Debug|x86.ActiveCfg = Debug|x86
+		{38FCF29A-08B6-41A2-9DF3-28D6617C583E}.Debug|x86.Build.0 = Debug|x86
+		{38FCF29A-08B6-41A2-9DF3-28D6617C583E}.Release|x86.ActiveCfg = Release|x86
+		{38FCF29A-08B6-41A2-9DF3-28D6617C583E}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AF16A1FA-33B0-47A6-AECC-D2BE992AA29B}
+	EndGlobalSection
+EndGlobal

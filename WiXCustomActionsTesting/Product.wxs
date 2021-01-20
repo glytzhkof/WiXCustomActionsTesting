@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Product Id="*" Name="SimpleCustomActions" Language="1033" Version="1.0.0.0"
+           Manufacturer="installdude.com" UpgradeCode="88888888-7777-7777-7777-888888888888">
+    <Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+    <MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+    <MediaTemplate EmbedCab="yes" />
+
+    <!-- Available Dialog Sets: WixUI_Advanced, WixUI_FeatureTree, WixUI_InstallDir, WixUI_Minimal, WixUI_Mondo  -->
+    <UIRef Id="WixUI_Minimal" />
+    <Feature Id="ProductFeature" Title="SimpleCustomActions" Level="1" />
+
+<!-- START: Custom action entries -->
+
+    <!--<Binary Id="CustomActions" SourceFile="$(var.CustomAction1.TargetDir)\$(var.CustomAction1.TargetName).CA.dll" />-->
+    <Binary Id="CustomActions" SourceFile="..\CustomAction1\bin\Debug\CustomAction1.CA.dll" />
+    <CustomAction Id="SimpleCustomAction" BinaryKey="CustomActions" DllEntry="CustomAction1" />
+
+    <Binary Id='CA.vbs' SourceFile='CA.vbs' />
+    <CustomAction Id='CA.vbs' VBScriptCall='' BinaryKey='CA.vbs' Execute='immediate' Return='ignore' />
+
+    <InstallExecuteSequence>
+      <Custom Action="SimpleCustomAction" After="CostFinalize" />
+      <Custom Action='CA.vbs' After='InstallInitialize'>NOT Installed AND NOT REMOVE~="ALL"</Custom>
+    </InstallExecuteSequence>
+
+<!-- END: Custom action entries -->
+
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFilesFolder">
+        <Directory Id="INSTALLFOLDER" Name="SimpleCustomActions">
+          <Component Feature="ProductFeature">
+            <File Source="C:\Windows\System32\Notepad.exe" />
+          </Component>
+        </Directory>
+      </Directory>
+    </Directory>
+
+  </Product>
+</Wix>
