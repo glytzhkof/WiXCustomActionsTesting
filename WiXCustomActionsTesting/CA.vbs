@@ -14,3 +14,5 @@ msgrec.StringData(1) = "Hello... This is sent to the log."
 
 ' send message to running installer
 Session.Message msiMessageTypeInfo, msgrec
+
+' Test Merge Situation
