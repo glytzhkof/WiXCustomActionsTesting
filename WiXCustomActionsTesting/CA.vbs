@@ -1,3 +1,4 @@
+' Test Message
 MsgBox "Hi!" ' Verify that the script runs
 
 Const msiMessageTypeInfo = &H04000000
